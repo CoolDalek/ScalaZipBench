@@ -7,7 +7,7 @@ import fs2.io.file.*
 import cats.effect.*
 import cats.effect.unsafe.implicits.global
 
-import java.nio.file.{Path as JPath, Files as JFile, FileSystem, FileSystems}
+import java.nio.file.{FileSystem, FileSystems}
 
 import scala.compiletime.uninitialized
 
@@ -17,7 +17,7 @@ object ZipBench:
 @State(Scope.Benchmark)
 class ZipBench:
   import ZipBench.*
-
+  
   @Param(Array("under64kb.txt", "over64kb.txt"))
   var fileName: String = uninitialized
   var zipFs: FileSystem = uninitialized
@@ -25,36 +25,38 @@ class ZipBench:
   var lib: ZipLib[IO] = uninitialized
 
   @Setup(Level.Trial)
-  def initLib(): Unit =
+  def init(): Unit =
     zipFs = FileSystems.newFileSystem(zip.toNioPath)
     file = Path.fromFsPath(
       zipFs,
       fileName,
     )
     lib = ZipLib.make[IO](file)
-  end initLib
-  
+  end init
+
   @TearDown(Level.Trial)
-  def closeFs(): Unit = zipFs.close()
-  
+  def close(): Unit = zipFs.close()
+
+  inline given [T]: Conversion[IO[T], T] = _.unsafeRunSync()
+
   @Benchmark
   def streamFoldStrings: String =
-    lib.streamFoldStrings.unsafeRunSync()
+    lib.streamFoldStrings
 
   @Benchmark
   def streamFoldChunks: String =
-    lib.streamFoldChunks.unsafeRunSync()
+    lib.streamFoldChunks
 
   @Benchmark
   def nioReadAllBytes: String =
-    lib.nioReadAllBytes.unsafeRunSync()
+    lib.nioReadAllBytes
 
   @Benchmark
   def nioInputStream: String =
-    lib.nioInputStream.unsafeRunSync()
+    lib.nioInputStream
 
   @Benchmark
   def fs2ReadAllBytes: String =
-    lib.fs2ReadAllBytes.unsafeRunSync()
+    lib.fs2ReadAllBytes
 
 end ZipBench

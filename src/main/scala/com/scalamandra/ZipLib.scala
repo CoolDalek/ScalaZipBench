@@ -7,7 +7,7 @@ import cats.*
 import cats.syntax.all.*
 
 import java.nio.charset.Charset
-import java.nio.file.{FileSystem, FileSystems, Files as JFiles}
+import java.nio.file.Files as JFiles
 
 
 trait ZipLib[F[_]]:
@@ -29,18 +29,18 @@ object ZipLib:
         .compile
         .string
 
+    private inline def mkString(inline array: => Array[Byte]): String =
+      new String(
+        array,
+        Charset.forName("UTF-8")
+      )
+
     override def streamFoldChunks: F[String] =
       Files[F].readAll(file)
         .chunks
         .compile
         .foldMonoid
         .map(c => mkString(c.toArray))
-
-    private inline def mkString(inline array: => Array[Byte]): String =
-      new String(
-        array,
-        Charset.forName("UTF-8")
-      )
 
     override def nioReadAllBytes: F[String] =
       Sync[F].blocking {

@@ -1,0 +1,659 @@
+# JMH version: 1.32
+# VM version: JDK 17.0.6, Java HotSpot(TM) 64-Bit Server VM, 17.0.6+9-LTS-jvmci-22.3-b11
+# VM invoker: /home/rajven/graal/java17/bin/java
+# VM options: -XX:ThreadPriorityPolicy=1 -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:JVMCIThreadsPerNativeLibraryRuntime=1 -XX:-UnlockExperimentalVMOptions
+# Blackhole mode: full + dont-inline hint
+# Warmup: 20 iterations, 10 s each
+# Measurement: 20 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.scalamandra.ZipBench.fs2ReadAllBytes
+# Parameters: (fileName = under64kb.txt)
+
+# Run progress: 0,00% complete, ETA 01:06:40
+# Fork: 1 of 1
+Java HotSpot(TM) 64-Bit Server VM warning: -XX:ThreadPriorityPolicy=1 may require system level permission, e.g., being the root user. If the necessary permission is not possessed, changes to priority will be silently ignored.
+# Warmup Iteration   1: 785,609 ops/s
+# Warmup Iteration   2: 784,013 ops/s
+# Warmup Iteration   3: 961,404 ops/s
+# Warmup Iteration   4: 974,955 ops/s
+# Warmup Iteration   5: 921,880 ops/s
+# Warmup Iteration   6: 956,005 ops/s
+# Warmup Iteration   7: 963,342 ops/s
+# Warmup Iteration   8: 899,161 ops/s
+# Warmup Iteration   9: 966,429 ops/s
+# Warmup Iteration  10: 971,176 ops/s
+# Warmup Iteration  11: 964,644 ops/s
+# Warmup Iteration  12: 953,018 ops/s
+# Warmup Iteration  13: 971,189 ops/s
+# Warmup Iteration  14: 986,955 ops/s
+# Warmup Iteration  15: 971,209 ops/s
+# Warmup Iteration  16: 976,509 ops/s
+# Warmup Iteration  17: 970,320 ops/s
+# Warmup Iteration  18: 979,784 ops/s
+# Warmup Iteration  19: 979,152 ops/s
+# Warmup Iteration  20: 997,879 ops/s
+Iteration   1: 1003,994 ops/s
+Iteration   2: 1001,228 ops/s
+Iteration   3: 999,049 ops/s
+Iteration   4: 1024,694 ops/s
+Iteration   5: 1009,816 ops/s
+Iteration   6: 1031,286 ops/s
+Iteration   7: 1035,878 ops/s
+Iteration   8: 1043,799 ops/s
+Iteration   9: 1052,727 ops/s
+Iteration  10: 1053,496 ops/s
+Iteration  11: 1055,232 ops/s
+Iteration  12: 1070,833 ops/s
+Iteration  13: 1070,025 ops/s
+Iteration  14: 1072,515 ops/s
+Iteration  15: 1076,639 ops/s
+Iteration  16: 1090,282 ops/s
+Iteration  17: 1081,985 ops/s
+Iteration  18: 1083,131 ops/s
+Iteration  19: 1086,865 ops/s
+Iteration  20: 1100,476 ops/s
+
+
+Result "com.scalamandra.ZipBench.fs2ReadAllBytes":
+  1052,197 ±(99.9%) 27,881 ops/s [Average]
+  (min, avg, max) = (999,049, 1052,197, 1100,476), stdev = 32,107
+  CI (99.9%): [1024,317, 1080,078] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 17.0.6, Java HotSpot(TM) 64-Bit Server VM, 17.0.6+9-LTS-jvmci-22.3-b11
+# VM invoker: /home/rajven/graal/java17/bin/java
+# VM options: -XX:ThreadPriorityPolicy=1 -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:JVMCIThreadsPerNativeLibraryRuntime=1 -XX:-UnlockExperimentalVMOptions
+# Blackhole mode: full + dont-inline hint
+# Warmup: 20 iterations, 10 s each
+# Measurement: 20 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.scalamandra.ZipBench.fs2ReadAllBytes
+# Parameters: (fileName = over64kb.txt)
+
+# Run progress: 10,00% complete, ETA 01:00:07
+# Fork: 1 of 1
+Java HotSpot(TM) 64-Bit Server VM warning: -XX:ThreadPriorityPolicy=1 may require system level permission, e.g., being the root user. If the necessary permission is not possessed, changes to priority will be silently ignored.
+# Warmup Iteration   1: 18,943 ops/s
+# Warmup Iteration   2: 20,154 ops/s
+# Warmup Iteration   3: 18,946 ops/s
+# Warmup Iteration   4: 20,156 ops/s
+# Warmup Iteration   5: 20,138 ops/s
+# Warmup Iteration   6: 19,086 ops/s
+# Warmup Iteration   7: 20,493 ops/s
+# Warmup Iteration   8: 20,840 ops/s
+# Warmup Iteration   9: 19,775 ops/s
+# Warmup Iteration  10: 19,494 ops/s
+# Warmup Iteration  11: 19,763 ops/s
+# Warmup Iteration  12: 20,891 ops/s
+# Warmup Iteration  13: 19,785 ops/s
+# Warmup Iteration  14: 21,014 ops/s
+# Warmup Iteration  15: 21,082 ops/s
+# Warmup Iteration  16: 21,742 ops/s
+# Warmup Iteration  17: 20,024 ops/s
+# Warmup Iteration  18: 20,472 ops/s
+# Warmup Iteration  19: 20,468 ops/s
+# Warmup Iteration  20: 20,199 ops/s
+Iteration   1: 21,629 ops/s
+Iteration   2: 19,375 ops/s
+Iteration   3: 21,132 ops/s
+Iteration   4: 19,960 ops/s
+Iteration   5: 19,837 ops/s
+Iteration   6: 21,262 ops/s
+Iteration   7: 21,179 ops/s
+Iteration   8: 21,323 ops/s
+Iteration   9: 20,728 ops/s
+Iteration  10: 20,592 ops/s
+Iteration  11: 23,200 ops/s
+Iteration  12: 21,171 ops/s
+Iteration  13: 21,047 ops/s
+Iteration  14: 21,943 ops/s
+Iteration  15: 20,158 ops/s
+Iteration  16: 21,438 ops/s
+Iteration  17: 20,358 ops/s
+Iteration  18: 22,099 ops/s
+Iteration  19: 21,435 ops/s
+Iteration  20: 22,058 ops/s
+
+
+Result "com.scalamandra.ZipBench.fs2ReadAllBytes":
+  21,096 ±(99.9%) 0,780 ops/s [Average]
+  (min, avg, max) = (19,375, 21,096, 23,200), stdev = 0,898
+  CI (99.9%): [20,316, 21,876] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 17.0.6, Java HotSpot(TM) 64-Bit Server VM, 17.0.6+9-LTS-jvmci-22.3-b11
+# VM invoker: /home/rajven/graal/java17/bin/java
+# VM options: -XX:ThreadPriorityPolicy=1 -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:JVMCIThreadsPerNativeLibraryRuntime=1 -XX:-UnlockExperimentalVMOptions
+# Blackhole mode: full + dont-inline hint
+# Warmup: 20 iterations, 10 s each
+# Measurement: 20 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.scalamandra.ZipBench.nioInputStream
+# Parameters: (fileName = under64kb.txt)
+
+# Run progress: 20,00% complete, ETA 00:53:31
+# Fork: 1 of 1
+Java HotSpot(TM) 64-Bit Server VM warning: -XX:ThreadPriorityPolicy=1 may require system level permission, e.g., being the root user. If the necessary permission is not possessed, changes to priority will be silently ignored.
+# Warmup Iteration   1: 1592,226 ops/s
+# Warmup Iteration   2: 1801,521 ops/s
+# Warmup Iteration   3: 1753,067 ops/s
+# Warmup Iteration   4: 1772,382 ops/s
+# Warmup Iteration   5: 1738,697 ops/s
+# Warmup Iteration   6: 1776,449 ops/s
+# Warmup Iteration   7: 1740,106 ops/s
+# Warmup Iteration   8: 1748,878 ops/s
+# Warmup Iteration   9: 1737,036 ops/s
+# Warmup Iteration  10: 1768,851 ops/s
+# Warmup Iteration  11: 1764,846 ops/s
+# Warmup Iteration  12: 1751,003 ops/s
+# Warmup Iteration  13: 1773,769 ops/s
+# Warmup Iteration  14: 1761,856 ops/s
+# Warmup Iteration  15: 1743,010 ops/s
+# Warmup Iteration  16: 1774,566 ops/s
+# Warmup Iteration  17: 1790,160 ops/s
+# Warmup Iteration  18: 1730,658 ops/s
+# Warmup Iteration  19: 1756,961 ops/s
+# Warmup Iteration  20: 1767,671 ops/s
+Iteration   1: 1746,666 ops/s
+Iteration   2: 1754,039 ops/s
+Iteration   3: 1753,876 ops/s
+Iteration   4: 1755,951 ops/s
+Iteration   5: 1736,007 ops/s
+Iteration   6: 1761,938 ops/s
+Iteration   7: 1749,946 ops/s
+Iteration   8: 1756,622 ops/s
+Iteration   9: 1741,150 ops/s
+Iteration  10: 1758,145 ops/s
+Iteration  11: 1753,357 ops/s
+Iteration  12: 1748,265 ops/s
+Iteration  13: 1776,826 ops/s
+Iteration  14: 1751,420 ops/s
+Iteration  15: 1740,911 ops/s
+Iteration  16: 1743,123 ops/s
+Iteration  17: 1929,453 ops/s
+Iteration  18: 1761,879 ops/s
+Iteration  19: 1739,127 ops/s
+Iteration  20: 1748,839 ops/s
+
+
+Result "com.scalamandra.ZipBench.nioInputStream":
+  1760,377 ±(99.9%) 35,514 ops/s [Average]
+  (min, avg, max) = (1736,007, 1760,377, 1929,453), stdev = 40,899
+  CI (99.9%): [1724,863, 1795,892] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 17.0.6, Java HotSpot(TM) 64-Bit Server VM, 17.0.6+9-LTS-jvmci-22.3-b11
+# VM invoker: /home/rajven/graal/java17/bin/java
+# VM options: -XX:ThreadPriorityPolicy=1 -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:JVMCIThreadsPerNativeLibraryRuntime=1 -XX:-UnlockExperimentalVMOptions
+# Blackhole mode: full + dont-inline hint
+# Warmup: 20 iterations, 10 s each
+# Measurement: 20 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.scalamandra.ZipBench.nioInputStream
+# Parameters: (fileName = over64kb.txt)
+
+# Run progress: 30,00% complete, ETA 00:46:48
+# Fork: 1 of 1
+Java HotSpot(TM) 64-Bit Server VM warning: -XX:ThreadPriorityPolicy=1 may require system level permission, e.g., being the root user. If the necessary permission is not possessed, changes to priority will be silently ignored.
+# Warmup Iteration   1: 22,620 ops/s
+# Warmup Iteration   2: 23,673 ops/s
+# Warmup Iteration   3: 23,288 ops/s
+# Warmup Iteration   4: 24,337 ops/s
+# Warmup Iteration   5: 24,078 ops/s
+# Warmup Iteration   6: 24,698 ops/s
+# Warmup Iteration   7: 25,014 ops/s
+# Warmup Iteration   8: 24,464 ops/s
+# Warmup Iteration   9: 24,843 ops/s
+# Warmup Iteration  10: 23,349 ops/s
+# Warmup Iteration  11: 24,536 ops/s
+# Warmup Iteration  12: 23,942 ops/s
+# Warmup Iteration  13: 23,498 ops/s
+# Warmup Iteration  14: 26,288 ops/s
+# Warmup Iteration  15: 23,841 ops/s
+# Warmup Iteration  16: 24,215 ops/s
+# Warmup Iteration  17: 23,413 ops/s
+# Warmup Iteration  18: 23,563 ops/s
+# Warmup Iteration  19: 23,938 ops/s
+# Warmup Iteration  20: 24,499 ops/s
+Iteration   1: 24,668 ops/s
+Iteration   2: 23,641 ops/s
+Iteration   3: 24,352 ops/s
+Iteration   4: 23,900 ops/s
+Iteration   5: 25,356 ops/s
+Iteration   6: 23,982 ops/s
+Iteration   7: 24,659 ops/s
+Iteration   8: 23,642 ops/s
+Iteration   9: 22,934 ops/s
+Iteration  10: 23,959 ops/s
+Iteration  11: 23,923 ops/s
+Iteration  12: 24,156 ops/s
+Iteration  13: 23,757 ops/s
+Iteration  14: 23,897 ops/s
+Iteration  15: 24,196 ops/s
+Iteration  16: 24,350 ops/s
+Iteration  17: 23,522 ops/s
+Iteration  18: 24,168 ops/s
+Iteration  19: 23,333 ops/s
+Iteration  20: 24,302 ops/s
+
+
+Result "com.scalamandra.ZipBench.nioInputStream":
+  24,035 ±(99.9%) 0,458 ops/s [Average]
+  (min, avg, max) = (22,934, 24,035, 25,356), stdev = 0,527
+  CI (99.9%): [23,577, 24,493] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 17.0.6, Java HotSpot(TM) 64-Bit Server VM, 17.0.6+9-LTS-jvmci-22.3-b11
+# VM invoker: /home/rajven/graal/java17/bin/java
+# VM options: -XX:ThreadPriorityPolicy=1 -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:JVMCIThreadsPerNativeLibraryRuntime=1 -XX:-UnlockExperimentalVMOptions
+# Blackhole mode: full + dont-inline hint
+# Warmup: 20 iterations, 10 s each
+# Measurement: 20 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.scalamandra.ZipBench.nioReadAllBytes
+# Parameters: (fileName = under64kb.txt)
+
+# Run progress: 40,00% complete, ETA 00:40:07
+# Fork: 1 of 1
+Java HotSpot(TM) 64-Bit Server VM warning: -XX:ThreadPriorityPolicy=1 may require system level permission, e.g., being the root user. If the necessary permission is not possessed, changes to priority will be silently ignored.
+# Warmup Iteration   1: 1532,738 ops/s
+# Warmup Iteration   2: 1792,674 ops/s
+# Warmup Iteration   3: 1774,853 ops/s
+# Warmup Iteration   4: 1793,576 ops/s
+# Warmup Iteration   5: 1764,149 ops/s
+# Warmup Iteration   6: 1722,568 ops/s
+# Warmup Iteration   7: 1748,425 ops/s
+# Warmup Iteration   8: 1720,142 ops/s
+# Warmup Iteration   9: 1701,296 ops/s
+# Warmup Iteration  10: 1717,939 ops/s
+# Warmup Iteration  11: 1755,328 ops/s
+# Warmup Iteration  12: 1712,311 ops/s
+# Warmup Iteration  13: 1708,679 ops/s
+# Warmup Iteration  14: 1731,996 ops/s
+# Warmup Iteration  15: 1725,811 ops/s
+# Warmup Iteration  16: 1722,993 ops/s
+# Warmup Iteration  17: 1720,575 ops/s
+# Warmup Iteration  18: 1746,231 ops/s
+# Warmup Iteration  19: 1739,752 ops/s
+# Warmup Iteration  20: 1711,655 ops/s
+Iteration   1: 1704,722 ops/s
+Iteration   2: 1736,701 ops/s
+Iteration   3: 1700,501 ops/s
+Iteration   4: 1716,406 ops/s
+Iteration   5: 1719,758 ops/s
+Iteration   6: 1734,662 ops/s
+Iteration   7: 1707,662 ops/s
+Iteration   8: 1733,854 ops/s
+Iteration   9: 1721,089 ops/s
+Iteration  10: 1761,121 ops/s
+Iteration  11: 1748,772 ops/s
+Iteration  12: 1933,467 ops/s
+Iteration  13: 1746,528 ops/s
+Iteration  14: 1721,869 ops/s
+Iteration  15: 1699,632 ops/s
+Iteration  16: 1688,051 ops/s
+Iteration  17: 1697,084 ops/s
+Iteration  18: 1712,260 ops/s
+Iteration  19: 1730,193 ops/s
+Iteration  20: 1712,730 ops/s
+
+
+Result "com.scalamandra.ZipBench.nioReadAllBytes":
+  1731,353 ±(99.9%) 44,483 ops/s [Average]
+  (min, avg, max) = (1688,051, 1731,353, 1933,467), stdev = 51,227
+  CI (99.9%): [1686,870, 1775,836] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 17.0.6, Java HotSpot(TM) 64-Bit Server VM, 17.0.6+9-LTS-jvmci-22.3-b11
+# VM invoker: /home/rajven/graal/java17/bin/java
+# VM options: -XX:ThreadPriorityPolicy=1 -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:JVMCIThreadsPerNativeLibraryRuntime=1 -XX:-UnlockExperimentalVMOptions
+# Blackhole mode: full + dont-inline hint
+# Warmup: 20 iterations, 10 s each
+# Measurement: 20 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.scalamandra.ZipBench.nioReadAllBytes
+# Parameters: (fileName = over64kb.txt)
+
+# Run progress: 50,00% complete, ETA 00:33:26
+# Fork: 1 of 1
+Java HotSpot(TM) 64-Bit Server VM warning: -XX:ThreadPriorityPolicy=1 may require system level permission, e.g., being the root user. If the necessary permission is not possessed, changes to priority will be silently ignored.
+# Warmup Iteration   1: 22,123 ops/s
+# Warmup Iteration   2: 23,159 ops/s
+# Warmup Iteration   3: 22,613 ops/s
+# Warmup Iteration   4: 22,454 ops/s
+# Warmup Iteration   5: 22,316 ops/s
+# Warmup Iteration   6: 22,799 ops/s
+# Warmup Iteration   7: 22,977 ops/s
+# Warmup Iteration   8: 22,793 ops/s
+# Warmup Iteration   9: 24,038 ops/s
+# Warmup Iteration  10: 23,049 ops/s
+# Warmup Iteration  11: 23,847 ops/s
+# Warmup Iteration  12: 24,386 ops/s
+# Warmup Iteration  13: 23,292 ops/s
+# Warmup Iteration  14: 23,282 ops/s
+# Warmup Iteration  15: 24,081 ops/s
+# Warmup Iteration  16: 23,492 ops/s
+# Warmup Iteration  17: 24,176 ops/s
+# Warmup Iteration  18: 24,571 ops/s
+# Warmup Iteration  19: 24,304 ops/s
+# Warmup Iteration  20: 23,444 ops/s
+Iteration   1: 22,722 ops/s
+Iteration   2: 23,280 ops/s
+Iteration   3: 23,107 ops/s
+Iteration   4: 23,043 ops/s
+Iteration   5: 23,286 ops/s
+Iteration   6: 24,221 ops/s
+Iteration   7: 23,109 ops/s
+Iteration   8: 24,434 ops/s
+Iteration   9: 22,621 ops/s
+Iteration  10: 22,873 ops/s
+Iteration  11: 22,973 ops/s
+Iteration  12: 22,723 ops/s
+Iteration  13: 22,731 ops/s
+Iteration  14: 22,923 ops/s
+Iteration  15: 22,472 ops/s
+Iteration  16: 23,660 ops/s
+Iteration  17: 22,971 ops/s
+Iteration  18: 24,086 ops/s
+Iteration  19: 23,759 ops/s
+Iteration  20: 23,513 ops/s
+
+
+Result "com.scalamandra.ZipBench.nioReadAllBytes":
+  23,225 ±(99.9%) 0,482 ops/s [Average]
+  (min, avg, max) = (22,472, 23,225, 24,434), stdev = 0,555
+  CI (99.9%): [22,744, 23,707] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 17.0.6, Java HotSpot(TM) 64-Bit Server VM, 17.0.6+9-LTS-jvmci-22.3-b11
+# VM invoker: /home/rajven/graal/java17/bin/java
+# VM options: -XX:ThreadPriorityPolicy=1 -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:JVMCIThreadsPerNativeLibraryRuntime=1 -XX:-UnlockExperimentalVMOptions
+# Blackhole mode: full + dont-inline hint
+# Warmup: 20 iterations, 10 s each
+# Measurement: 20 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.scalamandra.ZipBench.streamFoldChunks
+# Parameters: (fileName = under64kb.txt)
+
+# Run progress: 60,00% complete, ETA 00:26:45
+# Fork: 1 of 1
+Java HotSpot(TM) 64-Bit Server VM warning: -XX:ThreadPriorityPolicy=1 may require system level permission, e.g., being the root user. If the necessary permission is not possessed, changes to priority will be silently ignored.
+# Warmup Iteration   1: 625,313 ops/s
+# Warmup Iteration   2: 921,836 ops/s
+# Warmup Iteration   3: 1015,852 ops/s
+# Warmup Iteration   4: 905,894 ops/s
+# Warmup Iteration   5: 948,179 ops/s
+# Warmup Iteration   6: 947,179 ops/s
+# Warmup Iteration   7: 926,037 ops/s
+# Warmup Iteration   8: 917,871 ops/s
+# Warmup Iteration   9: 926,702 ops/s
+# Warmup Iteration  10: 918,126 ops/s
+# Warmup Iteration  11: 912,661 ops/s
+# Warmup Iteration  12: 895,645 ops/s
+# Warmup Iteration  13: 902,924 ops/s
+# Warmup Iteration  14: 921,247 ops/s
+# Warmup Iteration  15: 912,665 ops/s
+# Warmup Iteration  16: 919,251 ops/s
+# Warmup Iteration  17: 908,247 ops/s
+# Warmup Iteration  18: 918,210 ops/s
+# Warmup Iteration  19: 913,539 ops/s
+# Warmup Iteration  20: 925,686 ops/s
+Iteration   1: 930,422 ops/s
+Iteration   2: 942,379 ops/s
+Iteration   3: 954,035 ops/s
+Iteration   4: 959,161 ops/s
+Iteration   5: 952,969 ops/s
+Iteration   6: 966,791 ops/s
+Iteration   7: 976,849 ops/s
+Iteration   8: 949,870 ops/s
+Iteration   9: 984,575 ops/s
+Iteration  10: 992,653 ops/s
+Iteration  11: 978,991 ops/s
+Iteration  12: 1006,638 ops/s
+Iteration  13: 1001,214 ops/s
+Iteration  14: 999,582 ops/s
+Iteration  15: 1025,951 ops/s
+Iteration  16: 1020,978 ops/s
+Iteration  17: 1037,016 ops/s
+Iteration  18: 1037,064 ops/s
+Iteration  19: 1032,086 ops/s
+Iteration  20: 1043,574 ops/s
+
+
+Result "com.scalamandra.ZipBench.streamFoldChunks":
+  989,640 ±(99.9%) 30,684 ops/s [Average]
+  (min, avg, max) = (930,422, 989,640, 1043,574), stdev = 35,336
+  CI (99.9%): [958,956, 1020,324] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 17.0.6, Java HotSpot(TM) 64-Bit Server VM, 17.0.6+9-LTS-jvmci-22.3-b11
+# VM invoker: /home/rajven/graal/java17/bin/java
+# VM options: -XX:ThreadPriorityPolicy=1 -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:JVMCIThreadsPerNativeLibraryRuntime=1 -XX:-UnlockExperimentalVMOptions
+# Blackhole mode: full + dont-inline hint
+# Warmup: 20 iterations, 10 s each
+# Measurement: 20 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.scalamandra.ZipBench.streamFoldChunks
+# Parameters: (fileName = over64kb.txt)
+
+# Run progress: 70,00% complete, ETA 00:20:03
+# Fork: 1 of 1
+Java HotSpot(TM) 64-Bit Server VM warning: -XX:ThreadPriorityPolicy=1 may require system level permission, e.g., being the root user. If the necessary permission is not possessed, changes to priority will be silently ignored.
+# Warmup Iteration   1: 18,964 ops/s
+# Warmup Iteration   2: 23,831 ops/s
+# Warmup Iteration   3: 21,698 ops/s
+# Warmup Iteration   4: 21,776 ops/s
+# Warmup Iteration   5: 20,886 ops/s
+# Warmup Iteration   6: 23,439 ops/s
+# Warmup Iteration   7: 19,748 ops/s
+# Warmup Iteration   8: 22,847 ops/s
+# Warmup Iteration   9: 23,361 ops/s
+# Warmup Iteration  10: 22,223 ops/s
+# Warmup Iteration  11: 21,786 ops/s
+# Warmup Iteration  12: 21,943 ops/s
+# Warmup Iteration  13: 21,533 ops/s
+# Warmup Iteration  14: 22,158 ops/s
+# Warmup Iteration  15: 21,743 ops/s
+# Warmup Iteration  16: 22,697 ops/s
+# Warmup Iteration  17: 23,291 ops/s
+# Warmup Iteration  18: 21,993 ops/s
+# Warmup Iteration  19: 21,772 ops/s
+# Warmup Iteration  20: 20,411 ops/s
+Iteration   1: 23,582 ops/s
+Iteration   2: 22,268 ops/s
+Iteration   3: 22,855 ops/s
+Iteration   4: 22,976 ops/s
+Iteration   5: 21,695 ops/s
+Iteration   6: 23,387 ops/s
+Iteration   7: 22,947 ops/s
+Iteration   8: 22,514 ops/s
+Iteration   9: 21,194 ops/s
+Iteration  10: 20,738 ops/s
+Iteration  11: 20,576 ops/s
+Iteration  12: 20,904 ops/s
+Iteration  13: 22,648 ops/s
+Iteration  14: 22,565 ops/s
+Iteration  15: 21,227 ops/s
+Iteration  16: 22,994 ops/s
+Iteration  17: 21,949 ops/s
+Iteration  18: 23,457 ops/s
+Iteration  19: 24,197 ops/s
+Iteration  20: 22,906 ops/s
+
+
+Result "com.scalamandra.ZipBench.streamFoldChunks":
+  22,379 ±(99.9%) 0,894 ops/s [Average]
+  (min, avg, max) = (20,576, 22,379, 24,197), stdev = 1,029
+  CI (99.9%): [21,485, 23,273] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 17.0.6, Java HotSpot(TM) 64-Bit Server VM, 17.0.6+9-LTS-jvmci-22.3-b11
+# VM invoker: /home/rajven/graal/java17/bin/java
+# VM options: -XX:ThreadPriorityPolicy=1 -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:JVMCIThreadsPerNativeLibraryRuntime=1 -XX:-UnlockExperimentalVMOptions
+# Blackhole mode: full + dont-inline hint
+# Warmup: 20 iterations, 10 s each
+# Measurement: 20 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.scalamandra.ZipBench.streamFoldStrings
+# Parameters: (fileName = under64kb.txt)
+
+# Run progress: 80,00% complete, ETA 00:13:22
+# Fork: 1 of 1
+Java HotSpot(TM) 64-Bit Server VM warning: -XX:ThreadPriorityPolicy=1 may require system level permission, e.g., being the root user. If the necessary permission is not possessed, changes to priority will be silently ignored.
+# Warmup Iteration   1: 579,995 ops/s
+# Warmup Iteration   2: 851,783 ops/s
+# Warmup Iteration   3: 1024,431 ops/s
+# Warmup Iteration   4: 1047,409 ops/s
+# Warmup Iteration   5: 1016,170 ops/s
+# Warmup Iteration   6: 1043,703 ops/s
+# Warmup Iteration   7: 1037,487 ops/s
+# Warmup Iteration   8: 1040,283 ops/s
+# Warmup Iteration   9: 1042,762 ops/s
+# Warmup Iteration  10: 1042,276 ops/s
+# Warmup Iteration  11: 1029,431 ops/s
+# Warmup Iteration  12: 1028,883 ops/s
+# Warmup Iteration  13: 1039,779 ops/s
+# Warmup Iteration  14: 1038,212 ops/s
+# Warmup Iteration  15: 1045,251 ops/s
+# Warmup Iteration  16: 1026,233 ops/s
+# Warmup Iteration  17: 1030,570 ops/s
+# Warmup Iteration  18: 1029,301 ops/s
+# Warmup Iteration  19: 988,333 ops/s
+# Warmup Iteration  20: 1036,310 ops/s
+Iteration   1: 1029,135 ops/s
+Iteration   2: 1018,915 ops/s
+Iteration   3: 1024,845 ops/s
+Iteration   4: 1029,416 ops/s
+Iteration   5: 1035,085 ops/s
+Iteration   6: 1026,341 ops/s
+Iteration   7: 1037,392 ops/s
+Iteration   8: 1031,841 ops/s
+Iteration   9: 1033,156 ops/s
+Iteration  10: 1040,141 ops/s
+Iteration  11: 1027,518 ops/s
+Iteration  12: 1038,180 ops/s
+Iteration  13: 1026,029 ops/s
+Iteration  14: 1020,522 ops/s
+Iteration  15: 1006,087 ops/s
+Iteration  16: 1029,525 ops/s
+Iteration  17: 1028,589 ops/s
+Iteration  18: 1017,106 ops/s
+Iteration  19: 968,120 ops/s
+Iteration  20: 1023,901 ops/s
+
+
+Result "com.scalamandra.ZipBench.streamFoldStrings":
+  1024,592 ±(99.9%) 13,454 ops/s [Average]
+  (min, avg, max) = (968,120, 1024,592, 1040,141), stdev = 15,494
+  CI (99.9%): [1011,138, 1038,046] (assumes normal distribution)
+
+
+# JMH version: 1.32
+# VM version: JDK 17.0.6, Java HotSpot(TM) 64-Bit Server VM, 17.0.6+9-LTS-jvmci-22.3-b11
+# VM invoker: /home/rajven/graal/java17/bin/java
+# VM options: -XX:ThreadPriorityPolicy=1 -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:JVMCIThreadsPerNativeLibraryRuntime=1 -XX:-UnlockExperimentalVMOptions
+# Blackhole mode: full + dont-inline hint
+# Warmup: 20 iterations, 10 s each
+# Measurement: 20 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.scalamandra.ZipBench.streamFoldStrings
+# Parameters: (fileName = over64kb.txt)
+
+# Run progress: 90,00% complete, ETA 00:06:41
+# Fork: 1 of 1
+Java HotSpot(TM) 64-Bit Server VM warning: -XX:ThreadPriorityPolicy=1 may require system level permission, e.g., being the root user. If the necessary permission is not possessed, changes to priority will be silently ignored.
+# Warmup Iteration   1: 15,896 ops/s
+# Warmup Iteration   2: 17,735 ops/s
+# Warmup Iteration   3: 19,380 ops/s
+# Warmup Iteration   4: 18,878 ops/s
+# Warmup Iteration   5: 17,009 ops/s
+# Warmup Iteration   6: 18,442 ops/s
+# Warmup Iteration   7: 18,732 ops/s
+# Warmup Iteration   8: 17,894 ops/s
+# Warmup Iteration   9: 19,657 ops/s
+# Warmup Iteration  10: 17,430 ops/s
+# Warmup Iteration  11: 18,269 ops/s
+# Warmup Iteration  12: 18,968 ops/s
+# Warmup Iteration  13: 17,913 ops/s
+# Warmup Iteration  14: 18,091 ops/s
+# Warmup Iteration  15: 18,465 ops/s
+# Warmup Iteration  16: 17,821 ops/s
+# Warmup Iteration  17: 19,843 ops/s
+# Warmup Iteration  18: 17,434 ops/s
+# Warmup Iteration  19: 19,066 ops/s
+# Warmup Iteration  20: 17,782 ops/s
+Iteration   1: 18,143 ops/s
+Iteration   2: 19,077 ops/s
+Iteration   3: 18,211 ops/s
+Iteration   4: 18,081 ops/s
+Iteration   5: 18,593 ops/s
+Iteration   6: 17,285 ops/s
+Iteration   7: 17,694 ops/s
+Iteration   8: 18,050 ops/s
+Iteration   9: 17,958 ops/s
+Iteration  10: 18,736 ops/s
+Iteration  11: 17,734 ops/s
+Iteration  12: 17,680 ops/s
+Iteration  13: 18,557 ops/s
+Iteration  14: 18,105 ops/s
+Iteration  15: 17,580 ops/s
+Iteration  16: 17,866 ops/s
+Iteration  17: 17,304 ops/s
+Iteration  18: 17,666 ops/s
+Iteration  19: 17,746 ops/s
+Iteration  20: 18,762 ops/s
+
+
+Result "com.scalamandra.ZipBench.streamFoldStrings":
+  18,041 ±(99.9%) 0,429 ops/s [Average]
+  (min, avg, max) = (17,285, 18,041, 19,077), stdev = 0,494
+  CI (99.9%): [17,613, 18,470] (assumes normal distribution)
+
+
+# Run complete. Total time: 01:06:52
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                      (fileName)   Mode  Cnt     Score    Error  Units
+ZipBench.fs2ReadAllBytes    under64kb.txt  thrpt   20  1052,197 ± 27,881  ops/s
+ZipBench.fs2ReadAllBytes     over64kb.txt  thrpt   20    21,096 ±  0,780  ops/s
+ZipBench.nioInputStream     under64kb.txt  thrpt   20  1760,377 ± 35,514  ops/s
+ZipBench.nioInputStream      over64kb.txt  thrpt   20    24,035 ±  0,458  ops/s
+ZipBench.nioReadAllBytes    under64kb.txt  thrpt   20  1731,353 ± 44,483  ops/s
+ZipBench.nioReadAllBytes     over64kb.txt  thrpt   20    23,225 ±  0,482  ops/s
+ZipBench.streamFoldChunks   under64kb.txt  thrpt   20   989,640 ± 30,684  ops/s
+ZipBench.streamFoldChunks    over64kb.txt  thrpt   20    22,379 ±  0,894  ops/s
+ZipBench.streamFoldStrings  under64kb.txt  thrpt   20  1024,592 ± 13,454  ops/s
+ZipBench.streamFoldStrings   over64kb.txt  thrpt   20    18,041 ±  0,429  ops/s
